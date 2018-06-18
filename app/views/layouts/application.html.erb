@@ -4,12 +4,35 @@
     <title>NodeRewards</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div id="sidebar">
+	  <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="http://www.communitynode.org/questions/faq">Questions</a></li>
+        <li><a href="http://www.communitynode.org/questions/points">Bullet Points</a></li>
+        <li><a href="http://www.communitynode.org/rewards/index">Rewards</a></li>
+        <li><a href="http://www.communitynode.org/support/contests">Contests</a></li>
+        <li><a href="http://www.communitynode.org/support/dapps">dapps</a></li>
+        <li><a href="http://www.communitynode.org/support/fledglings">Mentoring</a></li>
+        <li><a href="http://www.communitynode.org/support/github">Github</a></li>
+        <li><a href="http://www.communitynode.org/support/staging">Staging</a></li>
+        <li><a href="http://www.communitynode.org/contact">Contact</a></li>
+      </ul>
+  </div>
+
   <body>
-    <%= yield %>
+	<div id="banner">
+	  <%= image_tag("banner.png") %>
+	  <%= @page_title || "Community Node" %>
+	</div>
+		
+    <div id="main">
+      <%= yield %>
+    </div>
   </body>
+
 </html>
+
