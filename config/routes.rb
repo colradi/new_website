@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'questions/faq'
+  get 'questions/points'
+  get 'questions/voting'
+  get 'questions/wallets'
   get 'rewards/index'
   get 'support/index'
   get 'support/dapps'
