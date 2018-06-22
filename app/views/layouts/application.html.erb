@@ -27,14 +27,15 @@
 <!-- Google web fonts. You can get your own bundle at http://www.google.com/fonts. Don't forget to update the CSS accordingly!-->
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
-<link rel="stylesheet" href="../../assets/javascripts/flexslider/flexslider.css">
-<link rel="stylesheet" href="../../assets/stylesheets/css/basic-style.css">
+<link rel="stylesheet" href="<%= asset_path 'normalize.css' %>"
+<link rel="stylesheet" href="<%= asset_path 'flexslider.css' %>"
+<link rel="stylesheet" href="<%= asset_path 'basic-style.css' %>"
+
 
 <!-- end CSS-->
 
 <!-- JS-->
-<script src="../../assets/javascripts/libs/modernizr-2.6.2.min.js"></script>
+<script src="<%= asset_path 'libs/modernizr-2.6.2.min.js' %>"></script>
 <!-- end JS-->
 
 
@@ -82,7 +83,7 @@ float:right;
 
         <div id="banner">
         	<div id="logo">
-          <a href="http://www.communitynode.org"><img src="../../assets/images/tron@2x.png" height="32" width="112" alt="logo"></a>
+          <a href="/support/index"><img src="<%= asset_path 'tron@2x.png' %>" height="32" width="112" alt="logo"></a>
           <div class="title" href="http://www.communitynode.org">Community Node</div>
           </div>
 
@@ -92,24 +93,25 @@ float:right;
         <nav id="topnav" role="navigation">
           <div class="menu-toggle">Menu</div>
           <ul class="srt-menu" id="menu-main-navigation">
-              <li class="current"><a href="http://www.communitynode.org">Home</a></li>
-              <li><a href="http://www.communitynode.org/questions/faq">FAQ</a></li>
+              <li class="current"><a href="/support/index">Home</a></li>
+              <li><a href="/questions/faq">FAQ</a></li>
               <li><a href="">Support</a>
                   <ul>
-                      <li><a href="http://www.communitynode.org/support/contests">Contests</a></li>
-                      <li><a href="http://www.communitynode.org/support/dapps">Dapps</a></li>
-                      <li><a href="http://www.communitynode.org/support/fledglings">Mentoring</a></li>
-                      <li><a href="http://www.communitynode.org/support/github">Github</a></li>
-                      <li><a href="http://www.communitynode.org/support/staging">Staging</a></li>
+                      <li><a href="/support/contests">Contests</a></li>
+                      <li><a href="/support/dapps">Dapps</a></li>
+                      <li><a href="/support/fledglings">Mentoring</a></li>
+                      <li><a href="/support/github">Github</a></li>
+                      <li><a href="/support/staging">Staging</a></li>
                   </ul>
               </li>
               <li>
-                  <a href="http://www.communitynode.org/rewards/index">Rewards</a>
+                  <a href="/rewards/index">Rewards</a>
               </li>
           </ul>
 		</nav><!-- end main navigation -->
 
     </header><!-- end header -->
+
 
 <!-- main content area -->
 <div id="main" class="wrapper">
@@ -126,6 +128,8 @@ float:right;
 
     <%= yield %>
 
+  
+
   </div><!-- #end div #main .wrapper -->
 
 
@@ -135,19 +139,22 @@ float:right;
     	Community Node
     </div>
 
-<div id="attribution" class="wrapper clearfix" style="color:#666; font-size:11px;"><a href="https://github.com/bondibox/community-node" target="_blank" title="Github" style="color:#777;">Simple Responsive Template</a></div>
+<div id="attribution" class="wrapper clearfix" style="color:#666; font-size:11px;"><a href="https://github.com/bondibox/community-node" target="_blank" title="Github" style="color:#777;">Visit our Github</a></div>
 
 </footer><!-- #end footer area -->
 
 
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/javascripts/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+<script>window.jQuery || document.write('<script src="<%= asset_path 'libs/jquery-1.9.0.min.js' %>">\x3C/script>')</script>
 
-<script defer src="../../assets/javascripts/flexslider/jquery.flexslider-min.js"></script>
+
+<script defer src="<%= asset_path 'flexslider/jquery.flexslider-min.js' %>"></script>
+
 
 <!-- fire ups - read this file!  -->
-<script src="../../assets/javascripts/main.js"></script>
+<script src="<%= asset_path 'main.js' %>"></script>
+
 
 </body>
 </html>
