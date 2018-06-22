@@ -61,8 +61,10 @@ header{
 }
 #hero h1{
 	line-height:1.2em;
+	font-size: 4em;
 	margin-top:0px;
 	margin-bottom:10px;}
+
 
 .flexslider{
 	display:none;
